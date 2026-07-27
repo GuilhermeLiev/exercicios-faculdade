@@ -56,15 +56,18 @@ public class Livro {
 	public void setPaginas(int paginas) {
 		this.paginas = paginas;
 	}
+
+	public double calcularPrecoPorPagina() {
+		if (this.paginas > 0) {
+			return this.preco / this.paginas;
+		}
+		return 0.0; // Evita divisão por zero
+	}
 	
 	@Override
 	public String toString() {
-		return  "Livro: " + this.titulo +
-				"|Autor: " + this.autor +
-				"|Ano de Publicação: " + this.anoPublicacao +
-				"|Preço: " + this.preco +
-				"|Quantidade de páginas: " + this.paginas;
-		
+		return String.format("%s | Autor: %s | Ano: %d | Preço: R$%.2f | Páginas: %d",
+				titulo, autor, anoPublicacao, preco, paginas);
 	}
 	
 	
