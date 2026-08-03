@@ -39,14 +39,13 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente{" +
-                "nome='" + nome + '\'' +
-                ", idade=" + idade +
-                ", sexo=" + sexo +
-                ", email='" + email + '\'' +
-                ", senha='" + senha + '\'' +
-                ", Livro=" + livroCliente +
-                '}';
+        return "\n📋 === INFORMAÇÕES DO CLIENTE ===" +
+                "\nNome: " + nome +
+                "\nIdade: " + idade +
+                "\nSexo: " + sexo +
+                "\nEmail: " + email +
+                "\nSenha: " + senha +
+                "\n📚 Livro: " + livroCliente;
     }
 
     public String getNome() {
