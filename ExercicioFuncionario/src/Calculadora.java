@@ -45,7 +45,7 @@ public class Calculadora {
 
     }
 
-    // Operações especiais com valor inteiro
+    
     public int elevarAoQuadrado(int valor) {
         return valor * valor;
     }
@@ -54,7 +54,7 @@ public class Calculadora {
         return valor * valor * valor;
     }
 
-     // Método para imprimir informações
+     
     public void imprimeInfo() {
         System.out.println("=== CALCULADORA ===");
         System.out.println("Cor: " + cor);
