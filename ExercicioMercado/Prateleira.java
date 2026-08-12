@@ -4,13 +4,13 @@ public class Prateleira {
     private Produto produto3;
 
 
-    public Prateleira(Produto produto1, Produto produto2, Produto produto3){
+    public Prateleira(Produto produto1, Produto produto2, Produto produto3) {
         this.produto1 = produto1;
         this.produto2 = produto2;
         this.produto3 = produto3;
     }
 
-    public Prateleira(){
+    public Prateleira() {
         this.produto1 = null;
         this.produto2 = null;
         this.produto3 = null;
@@ -21,24 +21,30 @@ public class Prateleira {
     public Produto getProduto1() {
         return produto1;
     }
+
     public Produto getProduto2() {
         return produto2;
     }
+
     public Produto getProduto3() {
         return produto3;
     }
+
     public void setProduto1(Produto produto1) {
         this.produto1 = produto1;
     }
+
     public void setProduto2(Produto produto2) {
         this.produto2 = produto2;
     }
+
     public void setProduto3(Produto produto3) {
         this.produto3 = produto3;
     }
 
     //MÉTODO PRODUTOMAISCARO NÃO FINALIZADO.
-    public Produto produtoMaisCaro(){
+    public Produto produtoMaisCaro() {
         Produto maisCaro = null;
+        return maisCaro;
     }
 }

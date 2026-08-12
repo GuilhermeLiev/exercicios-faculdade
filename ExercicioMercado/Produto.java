@@ -4,9 +4,7 @@ public class Produto {
     private Data dataValidade;
 
 
-
-
-    public Produto(int nome, int preco, Data dataValidade){
+    public Produto(int nome, int preco, Data dataValidade) {
         this.nome = nome;
         this.preco = preco;
         this.dataValidade = dataValidade;
@@ -16,45 +14,48 @@ public class Produto {
     public Data getDataValidade() {
         return dataValidade;
     }
+
     public int getNome() {
         return nome;
     }
+
     public int getPreco() {
         return preco;
     }
+
     public void setDataValidade(Data dataValidade) {
         this.dataValidade = dataValidade;
     }
+
     public void setNome(int nome) {
         this.nome = nome;
     }
+
     public void setPreco(int preco) {
         this.preco = preco;
     }
 
-    public boolean verificaProdutoVencido(Data dataAtual){
-        if (dataAtual.getAno() > dataValidade.getAno()){
+    public boolean verificaProdutoVencido(Data dataAtual) {
+        if (dataAtual.getAno() > dataValidade.getAno()) {
+            return true;
+        } else if (dataAtual.getAno() == dataValidade.getAno() &&
+                dataAtual.getMes() > dataValidade.getMes()) {
+            return true;
+        } else if (dataAtual.getAno() == dataValidade.getAno() &&
+                dataAtual.getMes() == dataValidade.getMes() &&
+                dataAtual.getDia() > dataValidade.getDia()) {
             return true;
         }
-        else if (dataAtual.getAno() == dataValidade.getAno() && 
-            dataAtual.getMes() > dataValidade.getMes()) {
-            return true;
-        }
-        else if (dataAtual.getAno() == dataValidade.getAno() &&
-            dataAtual.getMes() == dataValidade.getMes() &&
-            dataAtual.getDia() > dataValidade.getDia()) {
-            return true;
-    }
-            return false;
-        
+        return false;
+
     }
 
 
     @Override
-    public String toString(){
+    public String toString() {
         return "=== INFORMAÇÕES PRODUTO ===\n" +
-        "Data de Validade: " + dataValidade + "\n" +
-        "Nome: " + nome + "\n" +
-        "Preço: " + preco;
+                "Data de Validade: " + dataValidade + "\n" +
+                "Nome: " + nome + "\n" +
+                "Preço: " + preco;
     }
 }
