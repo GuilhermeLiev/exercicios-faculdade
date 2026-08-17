@@ -42,9 +42,25 @@ public class Prateleira {
         this.produto3 = produto3;
     }
 
-    //MÉTODO PRODUTOMAISCARO NÃO FINALIZADO.
+
     public Produto produtoMaisCaro() {
         Produto maisCaro = null;
+        double maiorPreco = -1;
+        if (produto1 != null && produto1.getPreco() > maiorPreco) {
+            maisCaro = produto1;
+            maiorPreco = produto1.getPreco();
+        }
+
+        if (produto2 != null && produto2.getPreco() > maiorPreco) {
+            maisCaro = produto2;
+            maiorPreco = produto2.getPreco();
+        }
+
+        if (produto3 != null && produto3.getPreco() > maiorPreco) {
+            maisCaro = produto3;
+            maiorPreco = produto3.getPreco();
+        }
         return maisCaro;
     }
+
 }
